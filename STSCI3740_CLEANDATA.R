@@ -6,8 +6,7 @@ process_diabetes_data <- function(path1, path2) {
   mapping <- data.frame(mapping)
   
   df <- data.frame(data)
-  names(df)
-  unique(df$readmitted)
+
   
   df <- df[ , !(names(df) %in% c("weight", "payer_code", "medical_specialty"))]
   
@@ -39,11 +38,7 @@ process_diabetes_data <- function(path1, path2) {
   
   df <- df[, !names(df) %in% rm_cols]
   
-  head(df)
-  nrow(df)
-  ncol(df)
-  
-  head(df)
+
   
   df <- na.omit(df)
   cols <- names(df)
@@ -55,9 +50,7 @@ process_diabetes_data <- function(path1, path2) {
   }
   
   df <- df[, !names(df) %in% rm_cols]
-  
-  nrow(df)
-  ncol(df)
+
   
   df$readmitted <- as.numeric(as.character(df$readmitted))
   
