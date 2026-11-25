@@ -1,8 +1,13 @@
-process_diabetes_data <- function(path1, path2) {
-  data <- read.csv(path1)
-  df <- data.frame(data)
+library(here)
+library(readr)
+
+data1 <- read.csv(here("diabetes+130-us+hospitals+for+years+1999-2008","diabetic_data.csv"))
+data2 <- read.csv(here("diabetes+130-us+hospitals+for+years+1999-2008","IDS_mapping.csv"))
+
+process_diabetes_data <- function(data1, data2) {
+  df <- data.frame(data1)
   
-  mapping <- read.csv(path2)
+  mapping <- data2
   mapping <- data.frame(mapping)
   
   df <- data.frame(data)
