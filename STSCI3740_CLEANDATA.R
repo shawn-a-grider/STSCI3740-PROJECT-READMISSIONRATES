@@ -94,7 +94,7 @@ process_diabetes_data <- function(data1, data2) {
   return(df)
 }
 
-
+df <- process_diabetes_data(data1, data2)
 
 
 
