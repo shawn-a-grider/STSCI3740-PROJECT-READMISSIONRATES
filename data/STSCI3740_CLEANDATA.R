@@ -1,8 +1,8 @@
 library(here)
 library(readr)
 
-data1 <- read.csv(here("diabetes+130-us+hospitals+for+years+1999-2008","diabetic_data.csv"))
-data2 <- read.csv(here("diabetes+130-us+hospitals+for+years+1999-2008","IDS_mapping.csv"))
+data1 <- read.csv(here("data","diabetes+130-us+hospitals+for+years+1999-2008","diabetic_data.csv"))
+data2 <- read.csv(here("data","diabetes+130-us+hospitals+for+years+1999-2008","IDS_mapping.csv"))
 
 process_diabetes_data <- function(data1, data2) {
   df <- data.frame(data1)
