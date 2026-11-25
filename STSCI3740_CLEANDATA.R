@@ -10,7 +10,7 @@ process_diabetes_data <- function(data1, data2) {
   mapping <- data2
   mapping <- data.frame(mapping)
   
-  df <- data.frame(data)
+
 
   
   df <- df[ , !(names(df) %in% c("weight", "payer_code", "medical_specialty"))]
